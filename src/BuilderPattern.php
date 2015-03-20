@@ -75,6 +75,10 @@ class ConcreteBuilder extends Builder
         $this->_product->add("Part2");
     }
 
+    public function selfFeature() {
+        $this->_product->add("self feature");
+    }
+
     public function getResult()
     {
         return $this->_product;
@@ -99,6 +103,9 @@ class Director
     {
         $builder->buildPart1();
         $builder->buildPart2();
+        if ($builder instanceof ConcreteBuilder) {
+            $builder->selfFeature();
+        }
     }
 }
 
