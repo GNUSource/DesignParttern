@@ -1,0 +1,1 @@
+#这是关于Design Pattern的一些实现说明
